@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message secret</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-45deg, #ff4d6d, #ff758f, #ffb3c1, #ffe5ec);
+        background-size: 400% 400%;
+        animation: bg 10s ease infinite;
+        font-family: Arial, sans-serif;
+    }
+
+    @keyframes bg {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .box {
+        background: rgba(255,255,255,0.9);
+        padding: 30px;
+        border-radius: 18px;
+        width: 85%;
+        max-width: 350px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    button {
+        background: #e63946;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        font-size: 18px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    .message {
+        display: none;
+        margin-top: 20px;
+        font-size: 20px;
+        color: #333;
+        animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    
+    <button onclick="showMessage()">
+        Clique ici 💖
+    </button>
+
+    
+    <div id="secret" class="message">
+       🌹  بموت فيك حبيبي مالك  ❤️   
+    </div>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("secret").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
